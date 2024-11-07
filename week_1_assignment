@@ -1,1 +1,4 @@
+1. Fork in GitHub: Forking a repository on GitHub is about creating a personalized copy of a repository that has already been created in our own GitHub account. Although both forking and cloning involves creating copies of a repository, forking still maintains a link to the original repository it was copied from incase we want more update, cloning does not have this feature.
+2. When and why use a fork: Forking will be very useful when working on open-source projects with multiple contributors, helps us keep a personal version of a repository.
+
 
