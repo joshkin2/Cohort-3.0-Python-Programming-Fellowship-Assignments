@@ -73,6 +73,7 @@ message= 'Hello, Python!'
 length= len(message)
 print(length)
 
+
 # 16. Floating-point arithmetic
 a=3.14
 b=2.71
