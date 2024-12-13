@@ -467,3 +467,71 @@ country= ['China','Russia','USA','Finland','Sweden','Norway','Denmark']
 one_count, two_count, three_count= country[:3]
 scandic_countries= country[3:]
 print(one_count,two_count,three_count, scandic_countries)
+# Tuple Exercises: Level 1
+tpl= ()
+f_siblings= ('jane','star')
+m_siblings= ('andrew','jim')
+siblings= f_siblings + m_siblings
+print(len(siblings))
+full= list(siblings)
+full.append('joe')
+full.append('jessica')
+family_members= tuple(full)
+print(family_members)
+# Tuple Exercises: Level 2
+sibling1, sibling2, sibling3, sibling4, *parents= family_members
+print(sibling1)
+print(sibling2)
+print(sibling3)
+print(sibling4)
+print(parents)
+fruits= ('mango','watermelon','pineapple')
+vegetables= ('spinach', 'kale','beets')
+animal_products= ('egg','ponmo','honey')
+food_stuff_tp= fruits + vegetables+animal_products
+food_stuff_it= list(food_stuff_tp)
+print(food_stuff_it)
+print(food_stuff_it[-5])
+print(food_stuff_it[:3])
+print(food_stuff_it[6:])
+del(food_stuff_tp)
+nordic_countries= ('Denmark','Finland','Iceland','Norway','Sweden')
+print('Estonia' in nordic_countries)
+print('Iceland' in nordic_countries)
+# Sets Exercises: Level 1
+it_companies= {'Facebook', 'Google','Microsoft','Apple','IBM','Oracle','Amazon'}
+A={19,22,24,20,25,26}
+B= {19,22,20,25,26,24,28,27}
+age={22,19,24,25,26,24,25,24}
+len(it_companies)
+it_companies.add('Twitter')
+print(it_companies)
+it_companies.update(['Hugo','Selar','OpenAI'])
+print(it_companies)
+it_companies.remove('Selar')
+#when item to be deleted is not found when using remove() it will raise error, whereas when discard() is used it doesn't
+#Sets Exercises:Level 2
+st3= A.union(B)
+print(st3)
+print(A.intersection(B))
+print(A.issubset(B))
+print(A.isdisjoint(B))
+st3= A.union(B)
+st4= B.union(A)
+st5= st3.union(st4)
+print(st5)
+print(A.symmetric_difference(B))
+del(it_companies)
+del(A)
+del(B)
+# Sets Exercises: Level 3
+st_age= set(age)
+# string- immutable but ordered sequence of characters enclosed in single, double or triple quotes
+# list - ordered and mutable collection of items that allows duplicates
+# tuple - ordered but immutable collection of items
+# set - unordered but mutable collection of unique items
+sentence= 'I am a teacher and I love to inspire and teach people.'
+uni_words= set(sentence.split())
+print(uni_words)
+count_uni_words= len(uni_words)
+print(count_uni_words)
