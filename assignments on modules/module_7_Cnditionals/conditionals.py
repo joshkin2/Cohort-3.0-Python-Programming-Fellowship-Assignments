@@ -44,7 +44,39 @@ else:
     print(f'The season is Summer')
 fruits = ['banana','orange','mango','lemon']
 add_fruit= input('Check for fruit ')
-if add_fruit is in fruits:
+if add_fruit in fruits:
     print('That fruit already exist in the list')
-elif add_fruit is not in fruits:
-    print()
+else:
+    fruits.append(add_fruit)
+    print(fruits)
+# Exercises: Level 3
+   person = {
+        'first_name': 'Asabeneh',
+        'last_name': 'Yetayeh',
+        'age': 250,
+        'country': 'Finland',
+        'is_marred': True,
+        'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+        'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+}
+}
+
+if 'skills' in person:
+    skills= person['skills']
+    mid_skill=len(skills)//2
+    print(f"Middle skill is {skills[mid_skill]}")
+python_skill= 'python' in skills
+print(f"python skill present: {python_skill}")
+if set(skills)=={'JavaScript','React'}:
+    print("He is a front end developer")
+elif{'Node','Python','MongoDB'}.issubset(skills):
+    print("He is a backend developer")
+elif{'React','Node','MongoDB'}.issubset(skills):
+    print("He is a fullstack developer")
+else:
+    print("unknown title")
+if person.get('is_married') and person.get('country')=='Finlad':
+    his_name=f"{person['first_name']} {person['last_name']}"
+    print(f"{his_name} lives in Finland. He is married.")
