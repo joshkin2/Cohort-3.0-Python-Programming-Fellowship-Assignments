@@ -50,7 +50,7 @@ else:
     fruits.append(add_fruit)
     print(fruits)
 # Exercises: Level 3
-   person = {
+person = {
         'first_name': 'Asabeneh',
         'last_name': 'Yetayeh',
         'age': 250,
@@ -67,16 +67,16 @@ if 'skills' in person:
     skills= person['skills']
     mid_skill=len(skills)//2
     print(f"Middle skill is {skills[mid_skill]}")
-python_skill= 'python' in skills
-print(f"python skill present: {python_skill}")
-if set(skills)=={'JavaScript','React'}:
-    print("He is a front end developer")
-elif{'Node','Python','MongoDB'}.issubset(skills):
-    print("He is a backend developer")
-elif{'React','Node','MongoDB'}.issubset(skills):
-    print("He is a fullstack developer")
-else:
-    print("unknown title")
+    python_skill= 'Python' in skills
+    print(f"python skill present: {python_skill}")
+    if set(skills)=={'JavaScript','React'}:
+        print("He is a front end developer")
+    elif{'Node','Python','MongoDB'}.issubset(skills):
+        print("He is a backend developer")
+    elif{'React','Node','MongoDB'}.issubset(skills):
+        print("He is a fullstack developer")
+    else:
+        print("unknown title")
 if person.get('is_married') and person.get('country')=='Finlad':
     his_name=f"{person['first_name']} {person['last_name']}"
     print(f"{his_name} lives in Finland. He is married.")
