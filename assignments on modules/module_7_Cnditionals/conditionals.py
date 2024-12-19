@@ -42,3 +42,9 @@ elif season=='March'or season=='April'or season=='May':
     print(f'The season is Spring')
 else:
     print(f'The season is Summer')
+fruits = ['banana','orange','mango','lemon']
+add_fruit= input('Check for fruit ')
+if add_fruit is in fruits:
+    print('That fruit already exist in the list')
+elif add_fruit is not in fruits:
+    print()
