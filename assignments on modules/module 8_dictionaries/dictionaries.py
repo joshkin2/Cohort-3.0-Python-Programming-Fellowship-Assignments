@@ -10,5 +10,19 @@ student_dict={
   'country':'iran',
   'city':'izbeh',
   'address':'2 oslo dr'
-  print(len(student_dict))
-  
+print(len(student_dict))
+print(student_dict['skills'])
+type(student_dict['skills'])
+student_dict['skills']=['writing','drawing']
+keys= student_dict.keys()
+print(keys)
+values= student_dict.values()
+print(values)
+print(student_dict.items())
+del student_dict['address']
+del dog
+
+
+
+
+
