@@ -126,3 +126,32 @@ print(same_type([1,2,3,4,5,"4"]))
 def valid_variable(name):
     return name.isidentifier()
 print(valid_variable('name'))
+# List comprehension Exercises
+numbers=[-4,-3,-2,-1,0,2,4,6]
+neg_numbers=[i for i in numbers if i<1]
+print(neg_numbers)
+list_of_lists=[[[1,2,3]], [[4,5,6]],[[7,8,9]]]
+flat_list=[number for row in list_of_lists for row1 in row for number in row1]
+print(flat_list)
+answer1=[tuple([i] + [1]+ [i**r for r in range(1,6)])
+for i in range(11)]
+for row in answer1:
+    print(row)
+countries=[[('Finland','Heksinki')],[('Sweden','Stockholm')],[('Norway','Oslo')]]
+flat_count=[[country.upper(), country[:3].upper(),capital.upper()]
+for sublist in countries
+for country, capital in sublist]
+print(flat_count)
+countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
+list_dict= [
+    {'country':country.upper(),'city':city.upper()}
+    for sublist in countries
+    for country,city in sublist
+]
+print(list_dict)
+names = [[('Asabeneh', 'Yetayeh')], [('David', 'Smith')], [('Donald', 'Trump')], [('Bill', 'Gates')]]
+concat_str= [
+    f'{firstname} {lastname}'
+    for sublist in names
+    for firstname, lastname in sublist]
+print(concat_str)
