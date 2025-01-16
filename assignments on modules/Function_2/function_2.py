@@ -30,3 +30,15 @@ squared_num1= map(lambda number: number **2,numbers)
 print(list(squared_num1))
 upper_namess= map(lambda name:name.upper(),names)
 print(list(upper_namess))
+def contains(country):
+    if country.__contains__('land'):
+        return True
+    return False
+land_count=filter(contains,countries)
+print(list(land_count))
+def count_six(country):
+    if len(country)==6:
+        return True
+    return False
+count_with_six=filter(count_six,countries)
+print(list(count_with_six))
