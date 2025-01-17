@@ -42,3 +42,28 @@ def count_six(country):
     return False
 count_with_six=filter(count_six,countries)
 print(list(count_with_six))
+def than_six(country):
+    if len(country)>6:
+        return True
+    return False
+print(list(filter(than_six,countries)))
+def start_e(country):
+    if country.startswith("E"):
+        return True
+    return False
+print(list(filter(start_e,countries)))
+def double(num):
+    return num*2
+def is_even(num):
+    return num%2==0
+result= filter(is_even,map(double,numbers))
+print(list(result))
+lst= [1,2,3,4,5,6,7,8,9,10]
+def get_string_lists(lst):
+    return list(map(lambda x: str(x),lst))
+print(get_string_lists(lst))
+def sum_num(num):
+    return reduce(lambda x,y:x+y,num)
+print(sum_num(numbers))
+sentence= reduce(lambda x, y: f"{x}, {y}" if y != countries[-1] else f"{x}, and {y}", countries) + " are north European countries."
+print(sentence)
