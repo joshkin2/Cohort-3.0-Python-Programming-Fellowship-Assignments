@@ -9,7 +9,7 @@ student_dict={
   'skills':'coding',
   'country':'iran',
   'city':'izbeh',
-  'address':'2 oslo dr'
+  'address':'2 oslo dr'}
 print(len(student_dict))
 print(student_dict['skills'])
 type(student_dict['skills'])
