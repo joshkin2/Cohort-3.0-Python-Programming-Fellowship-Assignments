@@ -34,9 +34,16 @@ def count_lines(file_name):
 with open(r'C:\Users\theop\OneDrive\Documents\GitHub\Cohort-3.0-Python-Programming-Fellowship-Assignments\data\obama_speech.txt','r',encoding="utf-8") as f:
     print(f.read())
 file_path1= r'C:\Users\theop\OneDrive\Documents\GitHub\Cohort-3.0-Python-Programming-Fellowship-Assignments\data\obama_speech.txt'
-file_path2= r''
+file_path2= r'C:\Users\theop\OneDrive\Documents\GitHub\Cohort-3.0-Python-Programming-Fellowship-Assignments\data\michelle_obama_speech.txt'
+file_path3= r'C:\Users\theop\OneDrive\Documents\GitHub\Cohort-3.0-Python-Programming-Fellowship-Assignments\data\donald_speech.txt'
 print("summary of (a) obama_speech.txt:")
-print(count_words(file_path1))
-print(count_lines(file_path1))
+print("no. of words: ",count_words(file_path1))
+print("no. of lines: ",count_lines(file_path1))
+print("summary of (b) michelle_speech.txt:")
+print("no. of words: ",count_words(file_path2))
+print("no. of lines: ",count_lines(file_path2))
+print("summary of (c) melina_trump_speech.txt:")
+print("no. of words: ",count_words(file_path3))
+print("no. of lines: ",count_lines(file_path3))
 
 
