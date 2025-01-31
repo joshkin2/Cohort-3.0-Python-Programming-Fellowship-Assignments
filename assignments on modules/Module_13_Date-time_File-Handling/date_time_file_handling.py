@@ -23,3 +23,20 @@ def new_year_message(today):
         return 'Just another day in the trenches'
 print(new_year_message(today))
 # File Handling
+def count_words(file_name):
+    with open(file_name,'r',encoding="utf-8") as f:
+        words= f.read().split()
+        return len(words)
+def count_lines(file_name):
+    with open(file_name,'r', encoding="utf-8") as f:
+        lines= f.readlines()
+        return len(lines)
+with open(r'C:\Users\theop\OneDrive\Documents\GitHub\Cohort-3.0-Python-Programming-Fellowship-Assignments\data\obama_speech.txt','r',encoding="utf-8") as f:
+    print(f.read())
+file_path1= r'C:\Users\theop\OneDrive\Documents\GitHub\Cohort-3.0-Python-Programming-Fellowship-Assignments\data\obama_speech.txt'
+file_path2= r''
+print("summary of (a) obama_speech.txt:")
+print(count_words(file_path1))
+print(count_lines(file_path1))
+
+
