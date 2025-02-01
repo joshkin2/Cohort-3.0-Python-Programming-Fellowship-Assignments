@@ -48,7 +48,7 @@ print("no. of lines: ",count_lines(file_path3))
 
 import json
 from collections import Counter
-def ten_most_spoken_languages(json_file):
+def ten_most_spoken_languages(json_file,num):
     with open(json_file,'r',encoding="utf-8") as f:
         data= json.load(f)
         print("data type",type(data))
@@ -56,7 +56,22 @@ def ten_most_spoken_languages(json_file):
     for country in data:
         all_lang.extend(country.get('languages',[]))
     lang_counts= Counter(all_lang)
-    top_lang=lang_counts.most_common(10)
+    top_lang=[(count,lang) for lang, count in lang_counts.most_common(num)]
     return top_lang
 json_file= "data\countries_data.json"
-print(ten_most_spoken_languages(json_file))
+print(ten_most_spoken_languages(json_file,10))
+
+def most_populated_countries(json_file_c,num):
+    with open(json_file_c,'r',encoding="utf-8") as f:
+        data= json.load(f)
+    all_countries=[]
+    for country in data:
+        all_countries.append((country.get('name'),country.get('population')))
+        
+    country_counts= Counter(all_countries)
+    top_countries=[(count,country) for country, count in country_counts.most_common(num)]
+    print(top_countries)
+json_file_c= "data\countries_data.json"
+print(most_populated_countries(json_file_c,10))
+
+#Exercises: Level 2
