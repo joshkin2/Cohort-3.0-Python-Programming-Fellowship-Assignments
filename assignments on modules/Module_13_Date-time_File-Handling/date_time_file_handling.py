@@ -91,7 +91,7 @@ def find_most_common_words(fn,num):
         text= f.read()
         words= re.findall(r'\w+',text)
         word_counts= Counter(words)
-        top_words=[(count,word) for word, count in word_counts.most_common(num)]
+        top_words=[(word, count) for word, count in word_counts.most_common(num)]
         return top_words
 fn1= 'data\obama_speech.txt'
 print(find_most_common_words(fn1,10))
@@ -166,5 +166,6 @@ similarity = check_text_similarity(file1, file2)
 if similarity is not None:
     print(f"Similarity between {file1} and {file2}: {similarity}%")
 
-fn1= 'data\romeo_and_juliet.txt'
-print(find_most_common_words(fn1,10))
+file6= r'data\romeo_and_juliet.txt'
+romeo_and_juliet_common_words = find_most_common_words(file6, 10)
+print(romeo_and_juliet_common_words)
