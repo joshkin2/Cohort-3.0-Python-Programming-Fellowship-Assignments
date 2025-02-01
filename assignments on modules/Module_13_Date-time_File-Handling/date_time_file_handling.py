@@ -46,4 +46,17 @@ print("summary of (c) melina_trump_speech.txt:")
 print("no. of words: ",count_words(file_path3))
 print("no. of lines: ",count_lines(file_path3))
 
-
+import json
+from collections import Counter
+def ten_most_spoken_languages(json_file):
+    with open(json_file,'r',encoding="utf-8") as f:
+        data= json.load(f)
+        print("data type",type(data))
+    all_lang=[]
+    for country in data:
+        all_lang.extend(country.get('languages',[]))
+    lang_counts= Counter(all_lang)
+    top_lang=lang_counts.most_common(10)
+    return top_lang
+json_file= "data\countries_data.json"
+print(ten_most_spoken_languages(json_file))
