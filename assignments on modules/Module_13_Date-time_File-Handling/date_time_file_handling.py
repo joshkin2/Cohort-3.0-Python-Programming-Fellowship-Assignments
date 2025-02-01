@@ -169,3 +169,26 @@ if similarity is not None:
 file6= r'data\romeo_and_juliet.txt'
 romeo_and_juliet_common_words = find_most_common_words(file6, 10)
 print(romeo_and_juliet_common_words)
+import csv
+import re
+
+def count_occurence(filename):
+    python_count= 0
+    javascript_count=0
+    java_count=0
+    with open(filename,'r', encoding='utf-8') as file:
+        reader= csv.reader(file)
+        for row in reader:
+                line=" ".join(row)
+                if re.search(r'\bpython\b',line,re.IGNORECASE):
+                    python_count+=1
+                if re.search(r'\bjavascript\b',line,re.IGNORECASE):
+                    javascript_count+=1
+                if re.search(r'\bjava\b',line,re.IGNORECASE):
+                    java_count+=1
+    return python_count,javascript_count,java_count
+filename= r'data\hacker_news.csv'
+python_count,javascript_count,java_count= count_occurence(filename)
+print(f"Python: {python_count} occurences")
+print(f"Javascript: {javascript_count} occurences")
+print(f"Java: {java_count} occurences")
